@@ -23,6 +23,8 @@ main {
     background-color: $dark-bg;
     padding: 3rem 0;
     color: white;
+    z-index: 2;
+    position: relative;
     .content {
         @include max-width()
     }
