@@ -50,6 +50,7 @@ export default {
                     text-transform: uppercase;
                     color: white;
                     height: fit-content;
+                    font-size: 0.8rem;
                 }
             }
         }
