@@ -44,9 +44,31 @@ export default {
     <footer>
         <section class="link">
             <nav>
-                <h2>DC COMICS</h2>
+                <h2>dc comics</h2>
                 <ul>
                     <li v-for="(title, index) in dcComicsLink">
+                        {{ title.title }}
+                    </li>
+                </ul>
+                <h2>shop</h2>
+                <ul>
+                    <li v-for="title in shop">
+                        {{ title.title }}
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <h2>dc</h2>
+                <ul>
+                    <li v-for="title in dc">
+                        {{ title.title }}
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <h2>dc</h2>
+                <ul>
+                    <li v-for="title in sites">
                         {{ title.title }}
                     </li>
                 </ul>
@@ -58,6 +80,7 @@ export default {
     </footer>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@use '../styles/partials/variable' as *;
+@use '../styles/partials/mixin' as *;
 </style>
