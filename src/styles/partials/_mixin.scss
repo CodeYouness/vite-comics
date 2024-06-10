@@ -1,2 +1,11 @@
 // classi custom di css da aggiungere con @include + nome classe
 // esempio di classe: @mixin flex {display: flex}
+@mixin sp-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin sp-around {
+    display: flex;
+    justify-content: space-around;
+}
