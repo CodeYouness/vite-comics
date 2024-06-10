@@ -11,6 +11,12 @@
     justify-content: space-around;
 }
 
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin max-width {
     max-width: 1000px;
     margin: 0 auto;

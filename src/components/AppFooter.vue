@@ -39,12 +39,12 @@ export default {
                 { id: 5, title: "DC Power Visa", link: "#" }
             ],
 
-            social: [
+            socials: [
                 { id:1, social: 'facebook', url: './src/assets/img/footer-facebook.png'},
                 { id:2, social: 'twitter', url: './src/assets/img/footer-twitter.png'},
                 { id:3, social: 'youtube', url: './src/assets/img/footer-youtube.png'},
-                { id:4, social: 'pinterest', url: './src/assets/img/footer-periscope.png'},
-                { id:5, social: 'maps', url: './src/assets/img/footer-facebook.png'}
+                { id:4, social: 'pinterest', url: './src/assets/img/footer-pinterest.png'},
+                { id:5, social: 'periscope', url: './src/assets/img/footer-periscope.png'}
             ]
         }
     },
@@ -59,13 +59,13 @@ export default {
                     <h2>dc comics</h2>
                     <ul>
                         <li v-for="(title, index) in dcComicsLink">
-                            {{ title.title }}
+                            <a :href="title.link">{{ title.title }}</a>
                         </li>
                     </ul>
                     <h2>shop</h2>
                     <ul>
                         <li v-for="title in shop">
-                            {{ title.title }}
+                            <a :href="title.link">{{ title.title }}</a>
                         </li>
                     </ul>
                 </nav>
@@ -73,7 +73,7 @@ export default {
                     <h2>dc</h2>
                     <ul>
                         <li v-for="title in dc">
-                            {{ title.title }}
+                            <a :href="title.link">{{ title.title }}</a>
                         </li>
                     </ul>
                 </nav>
@@ -81,7 +81,7 @@ export default {
                     <h2>dc</h2>
                     <ul>
                         <li v-for="title in sites">
-                            {{ title.title }}
+                            <a :href="title.link">{{ title.title }}</a>
                         </li>
                     </ul>
                 </nav>
@@ -94,9 +94,12 @@ export default {
     </main>
 
     <footer>
-        <div class="call-to-action">
-            <button class="sign-up">sign-up now!</button>
-            <section class="social"></section>
+        <div>
+            <button>sign-up now!</button>
+            <section>
+                <span>follow us</span>
+                <img v-for="social in socials" :src="social.url" :alt="social.social">
+            </section>
         </div>
 
     </footer>
@@ -149,8 +152,33 @@ main {
 footer {
     position: relative;
     z-index: 2;
+    padding: 1.5rem 0 2rem;
     background-color: $footer-bg;
-    .call-to-action {
+    div {
+        @include max-width();
+        @include sp-between();
+
+        button {
+            border-radius: 0;
+            background-color: $footer-bg;
+            text-transform: uppercase;
+            color: white;
+            border: 2px solid $primary-color;
+            padding: 0.5rem 1rem;
+        }
+
+        section {
+            span {
+                text-transform: uppercase;
+                color: $primary-color;
+                padding-right: 1rem;
+            }
+            
+            img {
+                vertical-align: middle;
+                margin-left: 1rem;
+            }
+        }
     }
 }
 </style>
