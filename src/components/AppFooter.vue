@@ -37,6 +37,14 @@ export default {
                 { id: 3, title: "DC Kids", link: "#" },
                 { id: 4, title: "DC Universe", link: "#" },
                 { id: 5, title: "DC Power Visa", link: "#" }
+            ],
+
+            social: [
+                { id:1, social: 'facebook', url: './src/assets/img/footer-facebook.png'},
+                { id:2, social: 'twitter', url: './src/assets/img/footer-twitter.png'},
+                { id:3, social: 'youtube', url: './src/assets/img/footer-youtube.png'},
+                { id:4, social: 'pinterest', url: './src/assets/img/footer-periscope.png'},
+                { id:5, social: 'maps', url: './src/assets/img/footer-facebook.png'}
             ]
         }
     },
@@ -44,8 +52,8 @@ export default {
 </script>
 
 <template>
-    <footer>
-        <div class="container">
+    <main>
+        <div class="container-link">
             <section class="link">
                 <nav>
                     <h2>dc comics</h2>
@@ -83,45 +91,66 @@ export default {
                 <img src="../assets/img/dc-logo-bg.png" alt="">
             </section>
         </div>
+    </main>
+
+    <footer>
+        <div class="call-to-action">
+            <button class="sign-up">sign-up now!</button>
+            <section class="social"></section>
+        </div>
+
     </footer>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variable' as *;
 @use '../styles/partials/mixin' as *;
-footer {
+main {
     background-image: url(../assets/img/footer-bg.jpg);
-    .container {
+
+    .container-link {
         @include max-width();
         position: relative;
-    }
-    .link {
-        @include max-width();
-        display: flex;
-        align-items: start;
-        padding: 3rem 0;
-        h2 {
-            text-transform: uppercase;
-            color: white;
-            font-size: 1.3rem;
+
+        .link {
+            @include max-width();
+            display: flex;
+            align-items: start;
+            padding: 3rem 0;
+
+            h2 {
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.3rem;
+            }
+
+            ul {
+                padding: 1rem 0;
+
+                li {
+                    color: $secondary-txt;
+                    padding: 0.2rem 2rem 0.2rem 0;
+                    font-size: 0.8rem
+                }
+            }
         }
-        ul {
-            padding: 1rem 0;
-            li {
-                color: $secondary-txt;
-                padding: 0.2rem 2rem 0.2rem 0;
-                font-size: 0.8rem
+
+        .logo {
+            img {
+                position: absolute;
+                right: 0;
+                top: -25%;
+                z-index: 1;
             }
         }
     }
+}
 
-    .logo {
-        img {
-            position: absolute;
-            right: 0;
-            top: -25%;
-            z-index: 1;
-        }
+footer {
+    position: relative;
+    z-index: 2;
+    background-color: $footer-bg;
+    .call-to-action {
     }
 }
 </style>
