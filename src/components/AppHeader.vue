@@ -49,7 +49,7 @@ export default {
     text-transform: uppercase;
     height: fit-content;
     .image {
-    width: 8%;
+    width: 7%;
         img {
             width: 100%;
         }
