@@ -59,7 +59,6 @@ export default {
     align-items: center;
         ul {
         display: flex;
-        list-style-type: none;
             li {
                 margin: 0 0.5rem;
                 padding: calc(15vh/2) 0;

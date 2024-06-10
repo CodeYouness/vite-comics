@@ -11,10 +11,12 @@ export default {
                 { id: 6, title: "Videos", link: "#" },
                 { id: 7, title: "News", link: "#" }
             ],
+            
             shop: [
-            { id: 1, title: "Shop DC", link: "#" },
-            { id: 2, title: "Shop DC Collectibles", link: "#" },
+                { id: 1, title: "Shop DC", link: "#" },
+                { id: 2, title: "Shop DC Collectibles", link: "#" },
             ],
+
             dc: [
                 { id: 1, title: "Term Of Use", link: "#" },
                 { id: 2, title: "Privacy Policy (New)", link: "#" },
@@ -28,6 +30,7 @@ export default {
                 { id: 10, title: "Shop Help", link: "#" },
                 { id: 11, title: "Contact Us", link: "#" }
             ],
+
             sites: [
                 { id: 1, title: "DC", link: "#" },
                 { id: 2, title: "MAD Magazine", link: "#" },
@@ -74,8 +77,9 @@ export default {
                 </ul>
             </nav>
         </section>
+
         <section class="logo">
-            
+            <img src="../assets/img/dc-logo-bg.png" alt="">
         </section>
     </footer>
 </template>
@@ -83,4 +87,23 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variable' as *;
 @use '../styles/partials/mixin' as *;
+footer {
+    @include sp-between();
+    background-image: url(../assets/img/footer-bg.jpg);
+
+    .link {
+        @include sp-around();
+        ul {
+            padding: 1rem 0;
+            li {
+                color: $secondary-txt;
+                padding: 0.2rem 2rem 0.2rem 0;
+            }
+        }
+    }
+    h2 {
+        text-transform: uppercase;
+        color: white;
+    }
+}
 </style>
