@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            DcComicsLink: [
+            dcComicsLink: [
                 { id: 1, title: "Characters", link: "#" },
                 { id: 2, title: "Comics", link: "#" },
                 { id: 3, title: "Movies", link: "#" },
@@ -10,7 +10,31 @@ export default {
                 { id: 5, title: "Games", link: "#" },
                 { id: 6, title: "Videos", link: "#" },
                 { id: 7, title: "News", link: "#" }
-                ]
+            ],
+            shop: [
+            { id: 1, title: "Shop DC", link: "#" },
+            { id: 2, title: "Shop DC Collectibles", link: "#" },
+            ],
+            dc: [
+                { id: 1, title: "Term Of Use", link: "#" },
+                { id: 2, title: "Privacy Policy (New)", link: "#" },
+                { id: 3, title: "Ad Choices", link: "#" },
+                { id: 4, title: "Advertising", link: "#" },
+                { id: 5, title: "Jobs", link: "#" },
+                { id: 6, title: "Subscription", link: "#" },
+                { id: 7, title: "Tallene Workshop", link: "#" },
+                { id: 8, title: "CPSC Certificates", link: "#" },
+                { id: 9, title: "Ratings", link: "#" },
+                { id: 10, title: "Shop Help", link: "#" },
+                { id: 11, title: "Contact Us", link: "#" }
+            ],
+            sites: [
+                { id: 1, title: "DC", link: "#" },
+                { id: 2, title: "MAD Magazine", link: "#" },
+                { id: 3, title: "DC Kids", link: "#" },
+                { id: 4, title: "DC Universe", link: "#" },
+                { id: 5, title: "DC Power Visa", link: "#" }
+            ]
         }
     },
 }
@@ -22,7 +46,7 @@ export default {
             <nav>
                 <h2>DC COMICS</h2>
                 <ul>
-                    <li v-for="(title, index) in DcComicsLink">
+                    <li v-for="(title, index) in dcComicsLink">
                         {{ title.title }}
                     </li>
                 </ul>
