@@ -8,11 +8,24 @@ export default {
 </script>
 
 <template>
-    <div>
-        <p>main</p>
-    </div>
+    <main>
+        <div class="content">
+
+            <p>--> content goes here<--</p>
+        </div>
+    </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../styles/partials/variable' as *;
+@use '../styles/partials/mixin' as *;
+main {
+    background-color: $dark-bg;
+    padding: 3rem 0;
+    color: white;
+    .content {
+        @include max-width()
+    }
 
+}
 </style>

@@ -43,9 +43,7 @@ export default {
 
 .container {
     @include sp-between();
-    align-items: center;
-    max-width: $max-width;
-    margin: 0 auto;
+    @include max-width();
     font-weight: 600;
     font-size: 0.8rem;
     text-transform: uppercase;

@@ -3,9 +3,15 @@
 @mixin sp-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 @mixin sp-around {
     display: flex;
     justify-content: space-around;
+}
+
+@mixin max-width {
+    max-width: 1000px;
+    margin: 0 auto;
 }
