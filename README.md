@@ -5,3 +5,9 @@
 - Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo al Sass!
 ### Bonus:
 - Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
+
+## Human-Code
+- creo una lista per ogni elemento che si ripete cioè:
+    - lista di elementi di navigazione
+    - lista di categorie
+    - lista per ogni sotto-elemento di navigazione (le liste nel footer)
