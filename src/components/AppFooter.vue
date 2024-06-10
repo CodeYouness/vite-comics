@@ -177,6 +177,10 @@ footer {
             img {
                 vertical-align: middle;
                 margin-left: 1rem;
+                filter: brightness(100%);
+                &:hover {
+                    filter: brightness(150%);
+                }
             }
         }
     }
