@@ -11,3 +11,4 @@
     - lista di elementi di navigazione
     - lista di categorie
     - lista per ogni sotto-elemento di navigazione (le liste nel footer)
+- compongo il layout e: per ogni macro struttura che si ripete utilizzo il v-for
