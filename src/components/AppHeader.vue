@@ -62,6 +62,9 @@ export default {
             li {
                 margin: 0 0.5rem;
                 padding: calc(15vh/2) 0;
+                &:hover {
+                    color: $primary-color;
+                }
             }
             .active {
             color: $primary-color;
