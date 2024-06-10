@@ -20,11 +20,65 @@ export default {
 </script>
 
 <template>
+    
     <header>
-        
+        <div class="container">
+            <section class="image">
+                <img src="../assets/img/dc-logo.png" alt="">
+            </section>
+            <section class="list-title">
+                <ul>
+                    <li v-for="(title,index) in headerLink" :key="title.id" :class="(title.active) ? 'active': ''">
+                        {{ title.title }}
+                    </li>
+                </ul>
+            </section>
+        </div>
     </header>
 </template>
 
-<style scoped>
+<style lang='scss' scoped>
+@use '../styles/partials/variable' as *;
+@use '../styles/partials/mixin' as *;
+
+.container {
+    @include sp-between();
+    align-items: center;
+    max-width: $max-width;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    height: fit-content;
+    .image {
+    width: 8%;
+        img {
+            width: 100%;
+        }
+    }
+    .list-title {
+    display: flex;
+    align-items: center;
+        ul {
+        display: flex;
+        list-style-type: none;
+            li {
+                margin: 0 0.5rem;
+                padding: calc(15vh/2) 0;
+            }
+            .active {
+            color: $primary-color;
+            border-bottom: 5px solid $primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 </style>
