@@ -19,7 +19,7 @@ export default {
     <div>
         <img :src="singleCard.thumb" :alt="singleCard.type">
     </div>
-    <p>{{ singleCard.type }}</p>
+    <p>{{ singleCard.series }}</p>
 </article>
 </template>
 
@@ -39,6 +39,10 @@ article {
         img {
                 width: 100%;
             }
+        }
+    p {
+        padding-top: 1rem;
+        font-size: 0.8rem;
     }
 }
 

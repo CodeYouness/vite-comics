@@ -102,6 +102,11 @@ export default {
         <div class="content">
             <ListMagazine v-for="(product, index) in products" :singleCard="product" :key="index"/>
         </div>
+
+        <div class="more-content">
+            <button>load more</button>
+
+        </div>
     </main>
 
 </template>
@@ -130,6 +135,8 @@ main {
                 background-color: $primary-color;
                 padding: 0.5rem 1rem;
                 width: fit-content;
+                font-weight: 700;
+                font-size: 1.5rem;
             }
         }
     }
@@ -139,6 +146,17 @@ main {
         padding: 2rem 1rem;
         @include max-width();
     }
+    .more-content {
+        @include centered();
+        button {
+            text-transform: uppercase;
+            padding: 0.5rem 3rem;
+            background-color: $primary-color;
+            border: 0;
+            color: white;
+            margin-bottom: 1rem;
+        }
 
+    }
 }
 </style>
