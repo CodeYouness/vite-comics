@@ -3,6 +3,7 @@ import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppShop from './components/AppShop.vue';
+import SingleCard from './components/SingleCard.vue';
 
 
 export default {
@@ -15,7 +16,8 @@ export default {
     AppHeader,
     AppMain,
     AppShop,
-    AppFooter
+    AppFooter,
+    SingleCard
   }
 }
 </script>
