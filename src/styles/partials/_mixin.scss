@@ -21,3 +21,8 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+@mixin sec-max-width {
+    max-width: 1000px;
+    margin: 0 auto;
+}

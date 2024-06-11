@@ -1,4 +1,6 @@
 <script>
+import ListMagazine from './SingleCard.vue'
+
 export default {
     data() {
         return {
@@ -77,17 +79,31 @@ export default {
     }
 ]
         }
+        
     },
+    components:{
+    ListMagazine
+  }
 }
 </script>
 
 <template>
-    <main>
-        <div class="content">
 
-            <p>--> content goes here<--</p>
+    <main>
+
+        <div class="jumbo">
+            <article>
+                <div>
+                    <p>current series</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="content">
+            <ListMagazine/>
         </div>
     </main>
+
 </template>
 
 <style lang="scss" scoped>
@@ -95,12 +111,30 @@ export default {
 @use '../styles/partials/mixin' as *;
 main {
     background-color: $dark-bg;
-    padding: 3rem 0;
     color: white;
-    z-index: 2;
     position: relative;
+
+    .jumbo {
+        height: 50vh;
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+
+        article {
+            @include max-width();
+            position: relative;
+            top: 100%;
+            transform: translateY(-50%);
+
+            div {
+                text-transform: uppercase;
+                background-color: $primary-color;
+                padding: 0.5rem 1rem;
+                width: fit-content;
+            }
+        }
+    }
     .content {
-        @include max-width()
+        @include max-width();
     }
 
 }
