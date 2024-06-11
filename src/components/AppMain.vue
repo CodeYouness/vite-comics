@@ -134,6 +134,9 @@ main {
         }
     }
     .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
         @include max-width();
     }
 
