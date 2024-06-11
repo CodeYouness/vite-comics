@@ -100,7 +100,7 @@ export default {
         </div>
 
         <div class="content">
-            <ListMagazine/>
+            <ListMagazine v-for="(product, index) in products" :singleCard="product" :key="index"/>
         </div>
     </main>
 

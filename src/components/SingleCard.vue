@@ -4,13 +4,21 @@ export default {
         return {
         }
     },
+    props: {
+        singleCard: {
+            type: Object,
+            required:true 
+        }
+        
+    }
 }
 </script>
 
 <template>
-<div>
-    <p>ciao</p>
-</div>
+<article>
+    <img :src="singleCard.thumb" :alt="singleCard.type">
+    <p>{{ singleCard.type }}</p>
+</article>
 </template>
 
 <style lang="scss" scoped>
