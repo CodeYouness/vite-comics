@@ -33,6 +33,7 @@ export default {
         background-color: $primary-color;
         position: relative;
         z-index: 2;
+        
         section {
             @include max-width();
             @include sp-around();
@@ -41,6 +42,7 @@ export default {
             div {
                 @include centered();
                 height: 3rem;
+
                 img {
                     height: 100%;
                     margin-right: 1rem;

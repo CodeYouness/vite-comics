@@ -2,7 +2,7 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import AppJumbo from './components/AppJumbo.vue'
+import AppShop from './components/AppShop.vue';
 
 
 export default {
@@ -14,17 +14,19 @@ export default {
   components:{
     AppHeader,
     AppMain,
-    AppJumbo,
+    AppShop,
     AppFooter
   }
 }
 </script>
 
 <template>
+
  <AppHeader/>
  <AppMain/>
- <AppJumbo/>
+ <AppShop/>
  <AppFooter/>
+
 </template>
 
 <style lang='scss'>
